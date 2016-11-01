@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftServer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qW-XC-wo2">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsE-bk-SNp">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-52-eBc">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgv-Yn-ELg">
+                                <state key="normal" title="Start Server"/>
+                                <connections>
+                                    <action selector="onConnectWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Nc-vX-88C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vsE-bk-SNp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Bx-x6-KrT"/>
+                            <constraint firstItem="9kY-52-eBc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4dw-kR-kTT"/>
+                            <constraint firstItem="9kY-52-eBc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8ky-Kc-XGc"/>
+                            <constraint firstItem="9kY-52-eBc" firstAttribute="top" secondItem="vsE-bk-SNp" secondAttribute="bottom" constant="29" id="BLF-XT-WIv"/>
+                            <constraint firstItem="pgv-Yn-ELg" firstAttribute="top" secondItem="vsE-bk-SNp" secondAttribute="bottom" constant="21" id="EyR-7N-t2m"/>
+                            <constraint firstItem="6qW-XC-wo2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KzP-wP-4rI"/>
+                            <constraint firstItem="vsE-bk-SNp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="L6z-4X-8Fc"/>
+                            <constraint firstItem="6qW-XC-wo2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="QkO-r2-SkB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pgv-Yn-ELg" secondAttribute="trailing" constant="109" id="TZj-QQ-Eee"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9kY-52-eBc" secondAttribute="bottom" constant="200" id="eeG-sW-ZCe"/>
+                            <constraint firstItem="vsE-bk-SNp" firstAttribute="top" secondItem="6qW-XC-wo2" secondAttribute="bottom" constant="28" id="ln9-ik-6bd"/>
+                            <constraint firstItem="pgv-Yn-ELg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="109" id="lzL-R8-wsZ"/>
+                            <constraint firstItem="6qW-XC-wo2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="naY-YP-uBL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstField" destination="6qW-XC-wo2" id="bdv-D7-zRT"/>
+                        <outlet property="logView" destination="9kY-52-eBc" id="bja-Bg-FKA"/>
+                        <outlet property="secondField" destination="vsE-bk-SNp" id="utO-Pd-zac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>
