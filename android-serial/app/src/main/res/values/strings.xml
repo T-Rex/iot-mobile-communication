@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android Serial Demo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_connect">Connect</string>
+    <string name="label_disconnect">Disconnect</string>
+    <string name="label_led_control">LED turn on/off</string>
+    <string name="error_connection_is_open">Connection is already active.</string>
+</resources>
